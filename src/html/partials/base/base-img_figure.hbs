@@ -1,4 +1,7 @@
-<figure class="triptych__item">
-	<img class="tryptych__photo" src="{{src}}" alt="{{caption}}" />
-	{{#if caption}}<figcaption aria-hidden="true" class="triptych__photo--caption">{{caption}}</figcaption>{{/if}}
+<figure class="photo__container">
+	<img class="photo__img" src="{{src}}" alt="{{caption}}" />
+	{{#if caption}}<figcaption aria-hidden="true">
+		{{#if attribution }}<p class="photo__attribution">{{attribution}}</p>{{/if}}
+		<p class="photo__caption">{{caption}}</p>
+	</figcaption>{{/if}}
 </figure>
