@@ -7,10 +7,11 @@
   &__copy
     position absolute
     padding 20px
-    top 50%
+    width 100%
+    bottom 0
     z-index 10
     background-color rgba(0,0,0,0.5)
-    display inline-block
+    display block
     animation title 10s ease-in
 
 
@@ -45,11 +46,12 @@
       font-size 1.5em
 
     &__copy
-      top 66%
+      bottom initial
+      top calc(100% - 155px)
 
   +mq(bp-3)
     &__copy
-      top 400px
+      top calc(100vh - 206px)
 
 @keyframes zoomout {
   0% {
