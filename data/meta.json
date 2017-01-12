@@ -12,5 +12,5 @@
 	"social": true,
 	"meter": true,
 	"socialConnect": true,
-	"ads": false
+	"ads": true
 }
