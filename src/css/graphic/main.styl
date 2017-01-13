@@ -27,6 +27,27 @@ section
 	
 	&__overline
 		margin-top: .5em
+		
+.preface
+	&__credits
+		margin 1rem auto
+		
+		&:after
+			content ""
+			display block
+			height 0
+			border-bottom 3px solid $gray-medium
+			width 70px
+			margin 2rem auto
+		
+		p
+			color $gray-medium
+			font-size .9rem
+			font-family $benton
+			font-weight 400
+			line-height 1.4rem
+			margin 0 auto
+			
 	
 @media only screen and (min-width: 768px)
 	.ad-slot 
