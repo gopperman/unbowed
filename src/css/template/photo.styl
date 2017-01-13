@@ -68,14 +68,17 @@
 	.photo-diptych, .triptych
 		.photo	
 			&__container
-				padding 30px 5px 25px
-				
-				/* TODO: Kill me? */			
+				box-sizing border-box
+				padding 30px 4px 25px
+				flex-grow 1
+							
 				&:first-child
 					padding-left 0
+					padding-right 8px
 					
 				&:last-child
 					padding-right 0
+					padding-left 8px
 					
 @media only screen and (min-width: 990px) 
 	.photo-quotes
