@@ -1,0 +1,75 @@
+.intro
+  width 100%
+  position relative
+  overflow hidden
+  display block
+
+  &__copy
+    position absolute
+    padding 20px
+    width 100%
+    bottom 0
+    z-index 10
+    background-color rgba(0,0,0,0.5)
+    display block
+    animation title 10s ease-in
+
+
+  &__hero
+    animation zoomout 20s
+    width 100%
+
+
+  &__hed
+    font-size 2em
+    color white
+    text-shadow 1px 1px 1px #000
+    z-index 10
+    margin-top 0
+    margin-bottom 0
+    font-weight normal
+
+  &__subhed
+    font-size 1em
+    color white
+    text-shadow 1px 1px 1px #000
+    z-index 10
+
+  &__credit
+    display none
+
+  +mq(bp-2)
+    &__hed
+      font-size 5em
+
+    &__subhead
+      font-size 1.5em
+
+    &__copy
+      bottom initial
+      top calc(100% - 155px)
+
+  +mq(bp-3)
+    &__copy
+      top calc(100vh - 206px)
+
+@keyframes zoomout {
+  0% {
+  	transform scale3d(2.5,2.5,1) translate3d(10%,10%,0)
+  }
+  10% {
+    transform scale3d(2.5,2.5,1) translate3d(10%,10%,0)
+  }
+  100 {
+    transform scale3d(1) translate3d(0%,0%,0)
+  }
+}
+
+@keyframes title {
+  from {
+    opacity 0
+  }
+  to {
+    opacity 1
+  }
+}
