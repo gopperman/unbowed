@@ -11,9 +11,9 @@ setPathCookie()
 // Audio
 const audio = [
 	new Audio('.audio-ferguson'),
-	new Audio('.audio-baltimore'),
+	new Audio('.audio-intro'),
 	new Audio('.audio-boston'),
-	new Audio('.audio-freddy')
+	new Audio('.audio-freddie')
 ]
 
 picturefill()

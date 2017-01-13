@@ -13,6 +13,7 @@ export default class Audio {
 		this.$el = select(element)
 		this.pause = select(`${element} .audio__off`)
 		this.resume = select(`${element} .audio__on`)
+		this.hasClicked = false
 
 		const audioSrc = this.$el.getAttribute('data-audio-src')
 		const shouldAudioLoad = !isMobile.any()
@@ -23,7 +24,6 @@ export default class Audio {
 			preload: shouldAudioLoad,
 			mobileAutoEnable: true
 		})
-		console.log('constructed')
 	}
 
 	/**
@@ -39,10 +39,14 @@ export default class Audio {
 			addClass(clicked, 'audio__paused')
 			removeClass(clicked, 'audio__playing')
 		} else {
-			console.log('play')
 			this.player.play()
 			addClass(clicked, 'audio__playing')
 			removeClass(clicked, 'audio__paused')
+			if (! this.hasClicked ) {
+				track(`Apps - Unbowed - Audio Play - ${this.$el.getAttribute('data-audio-title')}`)
+				this.hasClicked = true
+			}
+
 		}
 	}
 
@@ -68,7 +72,6 @@ export default class Audio {
 	 * @return {void}
 	 */
 	init() {
-		console.log('init')
 		this.eventListeners()
 	}
 }
