@@ -4,7 +4,13 @@
 		{{#if audio-src}}{{> graphic/audio audio-src=audio-src }}{{/if}}
 	</div>
 	<div class="video">
-		<video autoplay loop>
+		{{#if poster}}<img 
+			src={{poster}}
+			class="video__fallback"
+			role="presentation"
+			alt="{{hed}}"/>
+		{{/if}}
+		<video class="video__player" autoplay loop {{#if poster}}poster={{poster}}{{/if}}>
 	  		{{#if mp4}}<source src="{{mp4}}" type="video/mp4">{{/if}}
 	  		{{#if webm}}<source src="{{webm}}" type="video/webm">{{/if}}
 			Your browser does not support the video tag.
