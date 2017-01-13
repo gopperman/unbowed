@@ -39,7 +39,6 @@ export default class Audio {
 			addClass(clicked, 'audio__paused')
 			removeClass(clicked, 'audio__playing')
 		} else {
-			console.log('play')
 			this.player.play()
 			addClass(clicked, 'audio__playing')
 			removeClass(clicked, 'audio__paused')
