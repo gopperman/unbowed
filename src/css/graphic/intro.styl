@@ -20,7 +20,7 @@
     width 100%
 
   &__image
-    transform scale3d(3,3,1) translate3d(12.5%,12.5%,0)
+    transform scale3d(1.5,1.5,1)
     margin 0 auto
 
     .intro--loaded &
@@ -65,7 +65,7 @@
       font-size 1.5em
 
     &__image
-      transform scale3d(2.5,2.5,1) translate3d(20%,0%,0)
+      transform scale3d(1.25,1.25,1)
 
       .intro--loaded &
         transform initial
@@ -74,19 +74,19 @@
 
 @keyframes zoomout {
   0% {
-  	transform scale3d(3,3,1) translate3d(12.5%,12.5%,0)
+  	transform scale3d(1.5,1.5,1)
   }
   100 {
-    transform scale3d(1) translate3d(0%,0%,0)
+    transform scale3d(1)
   }
 }
 
 @keyframes zoomout-desktop {
   0% {
-  	transform scale3d(2.5,2.5,1) translate3d(20%,0%,0)
+  	transform scale3d(1.25,1.25,1)
   }
   100 {
-    transform scale3d(1) translate3d(0%,0%,0)
+    transform scale3d(1)
   }
 }
 
