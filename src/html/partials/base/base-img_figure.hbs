@@ -1,6 +1,6 @@
 <figure class="photo__container{{#if fullwidth}} photo__container--fullwidth{{/if}}">
-	<img class="photo__img" src="{{src}}" alt="{{caption}}" />
-	{{#if caption}}<figcaption aria-hidden="true">
+	<img class="photo__img photo__container--child" src="{{src}}" alt="{{caption}}" />
+	{{#if caption}}<figcaption aria-hidden="true" class="photo__figcaption photo__container--child">
 		{{#if attribution }}<p class="photo__attribution">{{attribution}}</p>{{/if}}
 		<p class="photo__caption">{{caption}}</p>
 	</figcaption>{{/if}}
