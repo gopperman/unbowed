@@ -13,15 +13,19 @@ header-color(bgcolor)
         color #222
         svg
             fill #222
-                
+
 .g-header
+    position absolute
+    top 0
+    left 0
+    z-index 10
     width 100%
     padding 1rem
     color #222
-    border-bottom 1px solid #ccc
-    header-color($offblack)
+    // border-bottom 1px solid #ccc
+    header-color(rgba(0,0,0,0.5))
     &__inner
-        position relative     
+        position relative
         a
             opacity .75
             transition .2s ease all
