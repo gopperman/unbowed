@@ -3,14 +3,24 @@
 	top 20px
 	right 20px
 	
-	&__on, &__off
-		&.hide 
-			display none
+	&:hover
+		cursor hand
+		cursor pointer
+		z-index 999
 			
-		&:hover
-			cursor hand
-			cursor pointer
-			z-index 999
+	&__playing
+		.audio
+			&__on
+				display inline-block
+			&__off
+				display none
+	
+	&__paused
+		.audio
+			&__on
+				display none
+			&__off
+				display inline-block
 			
 	svg 
 		fill rgba(255,255,255,.5)
