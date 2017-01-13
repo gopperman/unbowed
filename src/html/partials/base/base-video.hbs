@@ -1,8 +1,13 @@
 <div class="video__container">
 	{{#if hed}}<h2 class="video__hed">{{hed}}</h2>{{/if}}
-	<video autoplay loop>
-  		{{#if mp4}}<source src="{{mp4}}" type="video/mp4">{{/if}}
-  		{{#if webm}}<source src="{{webm}}" type="video/webm">{{/if}}
-		Your browser does not support the video tag.
-	</video>
+	<div class="video__audio">
+		{{#if audio-src}}{{> graphic/audio audio-src=audio-src }}{{/if}}
+	</div>
+	<div class="video">
+		<video autoplay loop>
+	  		{{#if mp4}}<source src="{{mp4}}" type="video/mp4">{{/if}}
+	  		{{#if webm}}<source src="{{webm}}" type="video/webm">{{/if}}
+			Your browser does not support the video tag.
+		</video>
+	</div>
 </div>
