@@ -1,9 +1,9 @@
 .photo	
 	&__container
-		padding-bottom 25px
+		padding-bottom 40px
 		
 		&--fullwidth
-			padding 25px 0 5px
+			padding 15px 0 5px
 			
 	&__attribution
 		color $gray
@@ -12,11 +12,53 @@
 		
 	&__caption
 		color $gray-medium
-		font-family $sans
 		font-size .8rem
 		line-height 1.2rem
+		margin 5px auto
+		padding 0 5px
+
+.photo-quotes
+	text-align center
+
+	.photo__container
+		&:last-child
+			padding-bottom 0
+			
+	&__container
+		padding-bottom 30px
 		
+		&:last-child 
+			padding-bottom 0
+
+	.photo	
+		&__caption
+			color $black-hed
+			font-family $serif
+			font-weight 400
+			font-size 1.2rem
+			font-style italic
+			line-height 1.7rem
+			padding 5px 15px
+			
+		&__attribution
+			font-size 1rem
+			margin .3rem auto
+
+.photo-diptych, .triptych
+	.photo	
+		&__container
+			padding 15px 0 5px
+
 @media only screen and (min-width: 768px) 
+	.photo-quotes
+		margin 50px 0
+	.photo 
+		&__caption
+			padding 0
+			
+		&__fullwidth
+			padding 25px 0 5px
+			
 	.photo-diptych
 		flex-grid(2, 'photo__container')
 
@@ -24,23 +66,28 @@
 		flex-grid(3, 'photo__container')
 		
 	.photo-diptych, .triptych
-		.photo
+		.photo	
 			&__container
-				padding 12px
+				padding 30px 5px 25px
 				
+				/* TODO: Kill me? */			
 				&:first-child
 					padding-left 0
 					
 				&:last-child
 					padding-right 0
-
-			&__caption
-				padding 0 10px
-	
+					
+@media only screen and (min-width: 990px) 
 	.photo-quotes
-		margin 50px 0
-		
-		&__container			
+				
+		&__container
+			padding-bottom 0
+			&:last-child
+				padding-bottom 0
+				
+				.photo__container
+						padding-bottom 0
+					
 			.photo__container
 				flex-grid(2, 'photo__container--child')
 				align-items center
@@ -51,9 +98,10 @@
 				.photo__container
 					flex-direction row-reverse
 			
-		.photo
+		.photo	
 			&__figcaption
 				padding 0 40px
 				
 			&__caption
-				font-size 1rem
+				font-size 1.2rem
+				line-height 1.8rem

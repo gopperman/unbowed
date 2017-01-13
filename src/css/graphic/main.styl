@@ -8,12 +8,30 @@
 // See `base` folder for variables (color, font, media queries)
 
 section
+	&:after
+		content ""
+		display block
+		height 0
+		border-bottom 3px solid $gray-medium
+		width 70px
+		margin 3rem auto 1rem
 	p
 		font-family $serif
-		line-height 1.6rem
+		font-size 18px
+		line-height 1.9rem
 		margin 1rem 20px
+
+.ad-slot 
+	margin 25px 0
+	padding-top 0
+	
+	&__overline
+		margin-top: .5em
 	
 @media only screen and (min-width: 768px)
+	.ad-slot 
+		margin 50px 0
+		
 	section 
 		p
 			margin 1rem auto
