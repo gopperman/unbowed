@@ -1,4 +1,8 @@
-<div class="audio audio__paused{{#if class}} {{class}}{{/if}}" {{#if audio-src}}data-audio-src={{audio-src}}{{/if}}>
+<div 
+	class="audio audio__paused{{#if class}} {{class}}{{/if}}" 
+	{{#if audio-src}}data-audio-src={{audio-src}}{{/if}}
+	{{#if title}}data-audio-title={{title}}{{/if}}
+>
 	<span class="audio__off">@@include('audio-off.svg')</span>
 	<span class="audio__on">@@include('audio-on.svg')</span>
 </div>
