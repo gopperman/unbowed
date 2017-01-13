@@ -17,9 +17,13 @@
 		line-height 1.2rem
 		
 @media only screen and (min-width: 768px) 
+	.photo-diptych
+		flex-grid(2, 'photo__container')
+
 	.triptych
 		flex-grid(3, 'photo__container')
 		
+	.photo-diptych, .triptych
 		.photo
 			&__container
 				padding 12px
