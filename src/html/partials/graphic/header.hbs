@@ -5,5 +5,22 @@
     <p class="intro__credit">Written and reported by Akilah Johnson, with Jan Ransom</p>
     <p class="intro__credit">Visuals by Keith Bedford</p>
   </div>
-  <img class="intro__hero" src="assets/img/unbowed_tiled.jpg"/>
+  <picture class="intro__hero">
+  	<!--[if IE 9]><video style="display: none"><![endif]-->
+  	<source
+  		srcset="assets/img/unbowed_tiled.jpg"
+  		media="(max-width: 768px)" />
+  	<!-- <source
+  			data-srcset="1024.jpg"
+  			media="(max-width: 1024px)" />
+  	<source
+  			data-srcset="1200.jpg" /> -->
+    <!--[if IE 9]></video><![endif]-->
+    <img
+    		srcset="assets/img/placeholder.jpg"
+    		class="intro__image"
+    		alt="unbowed" />
+  </picture>
+  <div class="intro__gradient"></div>
+  <!-- <img class="intro__hero" src="assets/img/unbowed_tiled.jpg"/> -->
 </header>
