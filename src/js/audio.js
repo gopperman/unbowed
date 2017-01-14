@@ -22,7 +22,10 @@ export default class Audio {
 			src: [audioSrc],
 			html5: true,
 			preload: shouldAudioLoad,
-			mobileAutoEnable: true
+			mobileAutoEnable: true,
+			onend: function() {
+				this.resetIconState();
+			}.bind(this)
 		})
 	}
 
@@ -48,6 +51,11 @@ export default class Audio {
 			}
 
 		}
+	}
+
+	resetIconState() {
+		addClass(this.$el, 'audio__paused')
+		removeClass(this.$el, 'audio__playing')
 	}
 
 	/**
