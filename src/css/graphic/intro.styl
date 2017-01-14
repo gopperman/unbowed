@@ -14,7 +14,6 @@
     width 100%
     bottom 0
     z-index 10
-    // background-color rgba(0,0,0,0.5)
     display block
     animation title 4s ease-in
 
@@ -40,7 +39,6 @@
     margin-bottom 0
     line-height 1
     font-weight normal
-    letter-spacing -5px
 
   &__subhed
     font-size 1.3em
@@ -63,8 +61,13 @@
     z-index 5
 
   +mq(bp-2-5)
+    & .audio
+      top initial
+      bottom 20px
+
     &__hed
       font-size 5em
+      letter-spacing -5px
 
     &__subhead
       font-size 1.5em
