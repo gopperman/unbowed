@@ -4,20 +4,32 @@
   overflow hidden
   display block
 
+  & .audio
+    position absolute
+    right 20px
+    top 50px
+    z-index 20
+
   &__copy
     position absolute
     padding 20px
     width 100%
     bottom 0
     z-index 10
-    background-color rgba(0,0,0,0.5)
     display block
-    animation title 10s ease-in
+    animation title 4s ease-in
 
 
   &__hero
-    animation zoomout 20s
     width 100%
+
+  &__image
+    transform scale3d(1.5,1.5,1)
+    margin 0 auto
+
+    .intro--loaded &
+      transform initial
+      animation zoomout 20s
 
 
   &__hed
@@ -27,10 +39,11 @@
     z-index 10
     margin-top 0
     margin-bottom 0
+    line-height 1
     font-weight normal
 
   &__subhed
-    font-size 1em
+    font-size 1.3em
     color white
     text-shadow 1px 1px 1px #000
     z-index 10
@@ -38,30 +51,52 @@
   &__credit
     display none
 
-  +mq(bp-2)
+  &__gradient
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    width 100%
+    height 100%
+    background linear-gradient(45deg, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 49%,rgba(0,0,0,0) 100%)
+    z-index 5
+
+  +mq(bp-2-5)
+    & .audio
+      top initial
+      bottom 20px
+
     &__hed
       font-size 5em
+      letter-spacing -5px
 
     &__subhead
       font-size 1.5em
 
-    &__copy
-      bottom initial
-      top calc(100% - 155px)
+    &__image
+      transform scale3d(1.25,1.25,1)
 
-  +mq(bp-3)
-    &__copy
-      top calc(100vh - 206px)
+      .intro--loaded &
+        transform initial
+        animation zoomout-desktop 20s
+
 
 @keyframes zoomout {
   0% {
-  	transform scale3d(2.5,2.5,1) translate3d(10%,10%,0)
-  }
-  10% {
-    transform scale3d(2.5,2.5,1) translate3d(10%,10%,0)
+  	transform scale3d(1.5,1.5,1)
   }
   100 {
-    transform scale3d(1) translate3d(0%,0%,0)
+    transform scale3d(1,1,1)
+  }
+}
+
+@keyframes zoomout-desktop {
+  0% {
+  	transform scale3d(1.25,1.25,1)
+  }
+  100 {
+    transform scale3d(1,1,1)
   }
 }
 
