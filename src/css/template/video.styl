@@ -3,10 +3,7 @@
 	z-index 1
 	
 	&__audio
-		position absolute
-		top 20px
-		right 20px 
-		z-index 99
+		display none
 		
 	&__container	
 		margin 50px 0 25px
@@ -15,16 +12,35 @@
 		
 	&__hed
 		color $gray-light
-		font-size 3rem
+		font-size 7vw
 		font-family $miller
 		position absolute
-		bottom 20px
-		left 40px
+		bottom 10px
+		left 10px
 		z-index 99
-		
 
+	&__player
+		display none
 	
 @media only screen and (min-width: 768px)
 	.video
 		&__container
 			margin 50px 0
+			
+		&__fallback
+			display none
+		
+		&__player
+			display block
+		
+		&__audio
+			display block
+			position absolute
+			top 25px
+			right 25px 
+			z-index 99
+			
+		&__hed
+			font-size 3rem
+			left 40px
+			bottom 20px
