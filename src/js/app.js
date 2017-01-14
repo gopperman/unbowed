@@ -1,4 +1,4 @@
-// import Audio from './audio'
+import Audio from './audio'
 import setPathCookie from './utils/setPathCookie.js'
 import removeMobileHover from './utils/removeMobileHover.js'
 import wireSocialButtons from './utils/wireSocialButtons.js'
@@ -22,9 +22,9 @@ window.addEventListener('load', (e) => {
 	addClass(intro, 'intro--loaded')
 })
 
-// audio.forEach((element) => {
-// 	element.init()
-// })
+audio.forEach((element) => {
+	element.init()
+})
 
 // Add class to html if JS is loaded
 document.querySelector('html').classList.add('js-is-loaded')
